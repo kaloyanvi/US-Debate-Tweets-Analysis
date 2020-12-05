@@ -30,7 +30,7 @@ def preprocess_data(input_file):
     # Final touches
     debate_data = debate_data.sort_values(by=['created_at'])  # sorting the tweets chronologically
     debate_data = debate_data.reset_index().drop(columns=["index"])
-    debate_data.to_csv("data/debate_tweets.csv")  # making a new csv with the preprocessed data
+    debate_data.to_csv("../data/debate_tweets.csv")  # making a new csv with the preprocessed data
 
     print("\nData preprocessing complete! New .csv has been created /data/debate_tweets.csv")
     print("--- %s seconds ---" % (time.time() - start_time))
