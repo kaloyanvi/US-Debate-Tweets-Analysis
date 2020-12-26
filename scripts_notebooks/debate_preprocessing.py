@@ -27,21 +27,21 @@ def preprocessingDebate(file_path):
                 # checking if the current speaker is also a next speaker
                 if speaker == next_speaker:
                     texts[-1] += " " + next_text
-                    continue # skipping to next iteration
+                    continue  # skipping to next iteration
                 else:
-                    continue # skipping to next iteration
+                    continue  # skipping to next iteration
         
         except: # avoiding for the first row because there cant be previous speaker
                 pass 
         
         if speaker == next_speaker: 
-            #  combining the text of the current speaker and next if same
+            # combining the text of the current speaker and next if same
             speakers.append(speaker)
             minutes.append(minute)
             texts.append(current_text + " " + next_text)
 
         else:
-            #  text only of current speaker given next one is different
+            # text only of current speaker given next one is different
             speakers.append(speaker)
             minutes.append(minute)
             texts.append(current_text)
